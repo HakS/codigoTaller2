@@ -9,12 +9,14 @@ function Circulo(juego, x, y ) {
 }
 Circulo.prototype.actualizar = function() { 
     this.fps ++;
-    this.x = start;
-    if (this.y <= start {
-        this.y = start + (-this.ret)*(this.fps) + 0.5*(1.001)*Math.pow(this.fps,2);
+    this.x = this.start;
+    if (this.y <= (this.start)) {
+		var calc = this.start + (-this.ret)*(this.fps) + 0.5*(1.001)*Math.pow(this.fps,2);
+        if (calc >this.start+1)calc = this.start;        
+        this.y = calc;
     }
     else {
-        this.y = start;
+        this.y = this.start;
         this.fps=0;
         this.ret = this.ret - 5;
     }
